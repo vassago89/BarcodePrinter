@@ -1,0 +1,67 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:converters="clr-namespace:BarcodePrinter.Converters">
+
+    <!-- Converters -->
+    <converters:BoolToColorConverter x:Key="BoolToColorConverter"/>
+    <converters:ResultToColorConverter x:Key="ResultToColorConverter"/>
+    <converters:StringToVisibilityConverter x:Key="StringToVisibilityConverter"/>
+    <converters:InverseBoolConverter x:Key="InverseBoolConverter"/>
+
+    <!-- Card Shadow -->
+    <DropShadowEffect x:Key="CardShadow" BlurRadius="20" ShadowDepth="2"
+                      Direction="270" Opacity="0.08" Color="Black"/>
+
+    <!-- Base Touch Button -->
+    <Style x:Key="TouchButton" TargetType="Button">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Height" Value="60"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="12" Padding="24,10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Opacity" Value="0.8"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="border" Property="Opacity" Value="0.4"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Opacity" Value="0.9"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Primary Button (Blue) -->
+    <Style x:Key="TouchButtonPrimary" TargetType="Button" BasedOn="{StaticResource TouchButton}">
+        <Setter Property="Background" Value="#2563EB"/>
+    </Style>
+
+    <!-- Danger Button (Red) -->
+    <Style x:Key="TouchButtonDanger" TargetType="Button" BasedOn="{StaticResource TouchButton}">
+        <Setter Property="Background" Value="#DC2626"/>
+    </Style>
+
+    <!-- Success Button (Green) -->
+    <Style x:Key="TouchButtonSuccess" TargetType="Button" BasedOn="{StaticResource TouchButton}">
+        <Setter Property="Background" Value="#16A34A"/>
+    </Style>
+
+    <!-- Secondary Button (Gray) -->
+    <Style x:Key="TouchButtonSecondary" TargetType="Button" BasedOn="{StaticResource TouchButton}">
+        <Setter Property="Background" Value="#64748B"/>
+    </Style>
+
+</ResourceDictionary>

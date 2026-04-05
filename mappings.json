@@ -1,0 +1,34 @@
+{
+  "Mappings": [
+    {
+      "ModelName": "MODEL-A",
+      "Barcode1": "PART1-A-001",
+      "Barcode2": "PART2-A-001",
+      "QrData": "MODEL-A-SERIAL-001"
+    },
+    {
+      "ModelName": "MODEL-B",
+      "Barcode1": "PART1-B-001",
+      "Barcode2": "PART2-B-001",
+      "QrData": "MODEL-B-SERIAL-001"
+    },
+    {
+      "ModelName": "MODEL-C",
+      "Barcode1": "PART1-C-001",
+      "Barcode2": "PART2-C-001",
+      "QrData": "MODEL-C-SERIAL-001"
+    },
+    {
+      "ModelName": "MODEL-D",
+      "Barcode1": "PART1-D-001",
+      "Barcode2": "PART2-D-001",
+      "QrData": "MODEL-D-SERIAL-001"
+    },
+    {
+      "ModelName": "MODEL-E",
+      "Barcode1": "PART1-E-001",
+      "Barcode2": "PART2-E-001",
+      "QrData": "MODEL-E-SERIAL-001"
+    }
+  ]
+}
